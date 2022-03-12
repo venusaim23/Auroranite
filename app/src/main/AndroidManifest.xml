@@ -10,12 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Auroranite">
         <activity
-            android:name=".Activities.GatherInfo"
+            android:name=".Activities.HomeScreen"
+            android:exported="false"
+            android:label="@string/title_activity_home_screen"
+            android:theme="@style/Theme.Auroranite.NoActionBar" />
+        <activity
+            android:name=".Activities.CreateAccount"
             android:exported="false" />
         <activity
             android:name=".Activities.LoginActivity"
-            android:theme="@style/Theme.Auroranite.NoActionBar"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Auroranite.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
