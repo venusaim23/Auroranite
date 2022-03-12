@@ -13,4 +13,24 @@
     <string name="password">Password</string>
     <string name="sign_in">Sign in</string>
     <string name="create_account">Create account?</string>
+    <string name="app_logo">App logo</string>
+    <string name="profile_photo">Profile photo</string>
+    <string name="name">Name</string>
+    <string name="education">Education</string>
+    <string name="major_field_of_study">Major field of study</string>
+    <string name="graduation_year">Graduation Year</string>
+    <string name="country">Country</string>
+    <string name="skills">Skills (separated by commas)</string>
+    <string name="experience">Experience (separated by commas)</string>
+    <string name="salary_expectation">Salary Expectation (in ₹)</string>
+    <string name="preferred_mode">Preferred work mode:</string>
+    <string name="create">Create</string>
+    <string name="re_enter_password">Re-enter password</string>
+
+    <string-array name="work_mode">
+        <item>Part-time</item>
+        <item>Full-time</item>
+    </string-array>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>
