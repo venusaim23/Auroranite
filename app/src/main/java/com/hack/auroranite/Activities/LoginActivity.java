@@ -101,7 +101,7 @@ public class LoginActivity extends AppCompatActivity {
     private void displayHome() {
         binding.progressBarLogin.setVisibility(View.GONE);
         Toast.makeText(this, "Logged in", Toast.LENGTH_SHORT).show();
-//        startActivity(new Intent(this, HomeScreen.class));
+        startActivity(new Intent(this, HomeScreen.class));
         finish();
     }
 }

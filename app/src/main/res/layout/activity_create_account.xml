@@ -31,7 +31,7 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_round_account_circle" />
+                app:srcCompat="@drawable/ic_account_circle" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/name_til_su"

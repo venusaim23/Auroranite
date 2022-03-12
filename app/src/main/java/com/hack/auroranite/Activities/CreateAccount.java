@@ -2,6 +2,7 @@ package com.hack.auroranite.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -96,7 +97,7 @@ public class CreateAccount extends AppCompatActivity {
                         + task.getException(), Toast.LENGTH_LONG).show();
             }
             binding.progressBarSignUp.setVisibility(View.GONE);
-//            startActivity(new Intent(CreateAccount.this, HomeScreen.class));
+            startActivity(new Intent(CreateAccount.this, HomeScreen.class));
             finish();
         });
     }
