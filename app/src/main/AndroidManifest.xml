@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Auroranite">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.GatherInfo"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
