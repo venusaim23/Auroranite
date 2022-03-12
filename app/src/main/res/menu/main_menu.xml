@@ -6,4 +6,9 @@
         android:icon="@drawable/ic_account_circle"
         android:title="@string/profile_settings"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/sign_out"
+        android:title="@string/sign_out"
+        app:showAsAction="never" />
 </menu>

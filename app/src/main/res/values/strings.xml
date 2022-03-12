@@ -27,4 +27,22 @@
     <string name="profile_settings">Profile settings</string>
     <string name="jobs">Jobs</string>
     <string name="learn">Learn</string>
+    <string name="apply_now">Apply now</string>
+    <string name="favourite">Favourite</string>
+    <string name="create_account_">Create Account</string>
+    <string name="sign_out">Sign out</string>
+    <string name="filter_jobs">Filter Jobs:</string>
+
+    <string-array name="tags">
+        <item>Java </item>
+        <item>JavaScript </item>
+        <item>Python </item>
+        <item>C </item>
+        <item>C++ </item>
+    </string-array>
+
+    <string-array name="job_filter">
+        <item>Relevant</item>
+        <item>All</item>
+    </string-array>
 </resources>
