@@ -114,4 +114,18 @@ public class User {
     public void setWorkMode(String workMode) {
         this.workMode = workMode;
     }
+
+    public void updateUser(String name, String email, String education, String major, String gradYear,
+                           String country, String skills, String experience, String salary, String workMode) {
+        this.name = name;
+        this.email = email;
+        this.education = education;
+        this.major = major;
+        this.gradYear = gradYear;
+        this.country = country;
+        this.skills = skills;
+        this.experience = experience;
+        this.salary = salary;
+        this.workMode = workMode;
+    }
 }

@@ -20,4 +20,5 @@ public class Job {
     public int salary_max;
     public double longitude;
     public double latitude;
+    public boolean favourite;
 }

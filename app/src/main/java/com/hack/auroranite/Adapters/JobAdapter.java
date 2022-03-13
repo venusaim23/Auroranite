@@ -10,11 +10,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.hack.auroranite.Models.Job;
 import com.hack.auroranite.R;
 
@@ -25,6 +30,8 @@ import java.util.Locale;
 
 public class JobAdapter extends RecyclerView.Adapter<JobAdapter.ViewHolder> {
 
+    private DatabaseReference dbRef;
+
     private final String TAG = "JobAdapter";
     private Context context;
     private List<Job> jobs;
@@ -34,6 +41,8 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.ViewHolder> {
         this.jobs = jobs;
 
         Log.d(TAG, "JobAdapter: called");
+
+        dbRef = FirebaseDatabase.getInstance().getReference("Jobs");
     }
 
     @NonNull
@@ -139,6 +148,37 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.ViewHolder> {
             applyBtn.setOnClickListener(v -> {
                 Job job = jobs.get(getAdapterPosition());
                 context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(job.redirect_url)));
+            });
+
+            favImg.setOnClickListener(v -> {
+                Job job = jobs.get(getAdapterPosition());
+                if (job.favourite)
+                    favImg.setImageResource(R.drawable.ic_star_border);
+                else
+                    favImg.setImageResource(R.drawable.ic_star_filled);
+
+                job.favourite = !job.favourite;
+                notifyDataSetChanged();
+                updateDB(job);
+            });
+        }
+    }
+
+    private void updateDB(Job job) {
+        DatabaseReference ref = dbRef.child(job.id);
+        if (job.favourite) {
+            ref.setValue(job).addOnCompleteListener(task -> {
+                if (task.isSuccessful())
+                    Log.d(TAG, "updateDB: Favourite added");
+                else
+                    Toast.makeText(context, "Couldn't update job", Toast.LENGTH_SHORT).show();
+            });
+        } else {
+            ref.removeValue().addOnCompleteListener(task -> {
+                if (task.isSuccessful())
+                    Log.d(TAG, "updateDB: Favourite removed");
+                else
+                    Toast.makeText(context, "Couldn't update job", Toast.LENGTH_SHORT).show();
             });
         }
     }

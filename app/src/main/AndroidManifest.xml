@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Auroranite">
         <activity
+            android:name=".Activities.UpdateUser"
+            android:exported="false" />
+        <activity
             android:name=".Activities.HomeScreen"
             android:exported="false"
             android:theme="@style/Theme.Auroranite.NoActionBar" />
         <activity
             android:name=".Activities.CreateAccount"
-            android:label="@string/create_account_"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/create_account_" />
         <activity
             android:name=".Activities.LoginActivity"
             android:exported="true"

@@ -90,14 +90,14 @@ public class CreateAccount extends AppCompatActivity {
     private void updateDetails() {
         dbRef.child(user.getUID()).setValue(user).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
-                Toast.makeText(CreateAccount.this, "Details saved", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Details saved", Toast.LENGTH_SHORT).show();
             } else {
                 //handle error - prompt user to re-upload details after logging
-                Toast.makeText(CreateAccount.this, "Details could not be saved: "
+                Toast.makeText(this, "Details could not be saved: "
                         + task.getException(), Toast.LENGTH_LONG).show();
             }
             binding.progressBarSignUp.setVisibility(View.GONE);
-            startActivity(new Intent(CreateAccount.this, HomeScreen.class));
+            startActivity(new Intent(this, HomeScreen.class));
             finish();
         });
     }

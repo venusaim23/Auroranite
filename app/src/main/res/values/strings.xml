@@ -32,6 +32,7 @@
     <string name="create_account_">Create Account</string>
     <string name="sign_out">Sign out</string>
     <string name="filter_jobs">Filter Jobs:</string>
+    <string name="update">Update</string>
 
     <string-array name="tags">
         <item>Java </item>

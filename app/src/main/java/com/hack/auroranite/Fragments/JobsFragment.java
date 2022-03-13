@@ -109,6 +109,7 @@ public class JobsFragment extends Fragment {
                 Job job = gson.fromJson(result.toString(), type);
                 Log.d(TAG, "Job title: " + job.title);
 
+                job.favourite = false;
                 jobs.add(job);
                 adapter.notifyDataSetChanged();
             }
