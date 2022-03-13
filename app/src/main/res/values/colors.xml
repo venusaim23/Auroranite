@@ -8,6 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     
-    <color name="start_gradient">#6FCCD9</color>
-    <color name="end_gradient">#C457A1</color>
+<!--    <color name="start_gradient">#6FCCD9</color>-->
+<!--    <color name="end_gradient">#C457A1</color>-->
+
+    <color name="start_gradient">#D293C1</color>
+    <color name="mid_gradient">#49C8F3</color>
+    <color name="end_gradient">#75C374</color>
+
+    <color name="text_color">#454545</color>
+    <color name="hint_color">#AA454545</color>
 </resources>
