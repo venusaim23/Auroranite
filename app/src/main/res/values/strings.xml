@@ -35,6 +35,7 @@
     <string name="update">Update</string>
     <string name="powered_by">Powered by</string>
     <string name="alan_logo">Alan logo</string>
+    <string name="icon">Icon</string>
 
     <string-array name="tags">
         <item>Java </item>
