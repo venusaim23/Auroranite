@@ -39,6 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:contentDescription="@string/icon"
                     app:srcCompat="@drawable/ic_work" />
             </androidx.cardview.widget.CardView>
 
