@@ -49,11 +49,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="15dp"
                 android:text="JS Dev"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/salary_tv"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/job_image_card"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,33 +61,33 @@
                 android:id="@+id/company_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="15dp"
                 android:text="ABC company"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toStartOf="@+id/job_type_tv"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/job_title_tv"
                 app:layout_constraintTop_toBottomOf="@+id/job_title_tv" />
 
-            <TextView
-                android:id="@+id/salary_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="15dp"
-                android:text="₹20,000 - 40,000"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/job_title_tv" />
+            <!--            <TextView-->
+            <!--                android:id="@+id/salary_tv"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginEnd="15dp"-->
+            <!--                android:text="₹20,000 - 40,000"-->
+            <!--                android:textSize="18sp"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="@+id/job_title_tv" />-->
 
-            <TextView
-                android:id="@+id/job_type_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Full-Time"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/salary_tv"
-                app:layout_constraintStart_toStartOf="@+id/salary_tv"
-                app:layout_constraintTop_toBottomOf="@+id/salary_tv" />
+            <!--            <TextView-->
+            <!--                android:id="@+id/job_type_tv"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="Full-Time"-->
+            <!--                android:textSize="18sp"-->
+            <!--                android:textStyle="bold"-->
+            <!--                app:layout_constraintEnd_toEndOf="@+id/salary_tv"-->
+            <!--                app:layout_constraintStart_toStartOf="@+id/salary_tv"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/salary_tv" />-->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/tag_card1"
@@ -216,7 +216,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="15dp"
-                android:text="Posted: 20-10-2010"
+                android:text="Posted: 28 Feb, 2022"
                 android:textSize="16sp"
                 android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="@+id/location_tv"

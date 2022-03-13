@@ -62,8 +62,8 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.ViewHolder> {
         holder.companyTV.setText(job.company.display_name);
 
         String salary = (job.salary_is_predicted.equals("1"))? job.salary_min + " - " + job.salary_max:"";
-        holder.salaryTV.setText(salary);
-        holder.jobTypeTV.setText(job.contract_time);
+//        holder.salaryTV.setText(salary);
+//        holder.jobTypeTV.setText(job.contract_time);
 
         String description = job.description;
         holder.descriptionTV.setText(description);
@@ -108,8 +108,8 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.ViewHolder> {
 
         public TextView jobTitleTV;
         public TextView companyTV;
-        public TextView salaryTV;
-        public TextView jobTypeTV;
+//        public TextView salaryTV;
+//        public TextView jobTypeTV;
 
         public CardView tagCard1;
         public TextView tagTV1;
@@ -129,8 +129,8 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.ViewHolder> {
 
             jobTitleTV = itemView.findViewById(R.id.job_title_tv);
             companyTV = itemView.findViewById(R.id.company_tv);
-            salaryTV = itemView.findViewById(R.id.salary_tv);
-            jobTypeTV = itemView.findViewById(R.id.job_type_tv);
+//            salaryTV = itemView.findViewById(R.id.salary_tv);
+//            jobTypeTV = itemView.findViewById(R.id.job_type_tv);
 
             tagCard1 = itemView.findViewById(R.id.tag_card1);
             tagTV1 = itemView.findViewById(R.id.tag_tv1);

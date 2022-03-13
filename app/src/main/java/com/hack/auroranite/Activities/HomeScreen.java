@@ -1,6 +1,7 @@
 package com.hack.auroranite.Activities;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -35,6 +36,8 @@ public class HomeScreen extends AppCompatActivity {
     private LearnFragment learnFragment;
     private FragmentManager fragmentManager;
 
+    private String[] links;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +56,8 @@ public class HomeScreen extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.frame_layout, jobsFragment).commit();
 
+        links = getResources().getStringArray(R.array.playlist_links);
+
         binding.tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -70,15 +75,10 @@ public class HomeScreen extends AppCompatActivity {
             }
 
             private void replaceFragment(int position) {
-                if (position == 0) {
-                    jobsFragment = new JobsFragment();
-                    fragmentManager.beginTransaction().replace(R.id.frame_layout, jobsFragment)
-                            .commit();
-                } else if (position == 1) {
-                    learnFragment = new LearnFragment();
-                    fragmentManager.beginTransaction().replace(R.id.frame_layout, learnFragment)
-                            .commit();
-                }
+                if (position == 0)
+                    openJobFragment();
+                else if (position == 1)
+                    openLearnFragment();
             }
         });
 
@@ -104,6 +104,18 @@ public class HomeScreen extends AppCompatActivity {
         binding.alanButton.registerCallback(alanCallback);
     }
 
+    private void openLearnFragment() {
+        learnFragment = new LearnFragment();
+        fragmentManager.beginTransaction().replace(R.id.frame_layout, learnFragment)
+                .commit();
+    }
+
+    private void openJobFragment() {
+        jobsFragment = new JobsFragment();
+        fragmentManager.beginTransaction().replace(R.id.frame_layout, jobsFragment)
+                .commit();
+    }
+
     private void executeCommand(String commandName, JSONObject data) {
         if (commandName.equals("go_back")) {
             onBackPressed();
@@ -116,6 +128,50 @@ public class HomeScreen extends AppCompatActivity {
 
         if (commandName.equals("log_out")) {
             signOut();
+        }
+
+        if (commandName.equals("open_learn")) {
+            openLearnFragment();
+        }
+
+        if (commandName.equals("open_jobs")) {
+            openJobFragment();
+        }
+
+        if (commandName.equals("apply_job")) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.adzuna.in/land/ad/2852583517?se=tgpJkpGi7BGs_oCq2Byc2g&utm_medium=api&utm_source=bc63613b&v=56400BA53D8E23D891879ADB9660022A9E47C0A9")));
+        }
+
+        if (commandName.equals("navigate")) {
+            openSettings();
+        }
+
+        if (commandName.equals("open_course_java")) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(links[0])));
+        }
+
+        if (commandName.equals("open_course_cpp")) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(links[4])));
+        }
+
+        if (commandName.equals("open_course_c")) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(links[3])));
+        }
+
+        if (commandName.equals("open_course_python")) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(links[2])));
+        }
+
+        if (commandName.equals("open_course_html")) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(links[5])));
+        }
+
+        if (commandName.equals("open_course_css")) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(links[6])));
+        }
+
+        if (commandName.equals("open_course_js")) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(links[1])));
         }
     }
 
