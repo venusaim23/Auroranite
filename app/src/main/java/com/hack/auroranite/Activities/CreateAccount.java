@@ -65,7 +65,7 @@ public class CreateAccount extends AppCompatActivity {
         String salary = binding.salaryEtSu.getText().toString().trim();
         String mode = modes[binding.spinnerPreferredModeSu.getSelectedItemPosition()];
 
-        user = new User(mUser.getUid(), name, email, education, major, gradYear, country,
+        user = new User(name, email, education, major, gradYear, country,
                 skills, experience, salary, mode);
 
         if (password.equals(repPassword))
@@ -88,6 +88,7 @@ public class CreateAccount extends AppCompatActivity {
     }
 
     private void updateDetails() {
+        user.setUID(mUser.getUid());
         dbRef.child(user.getUID()).setValue(user).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 Toast.makeText(this, "Details saved", Toast.LENGTH_SHORT).show();

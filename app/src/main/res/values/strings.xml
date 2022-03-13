@@ -15,7 +15,7 @@
     <string name="skills">Skills (separated by commas)</string>
     <string name="experience">Experience (separated by commas)</string>
     <string name="salary_expectation">Salary Expectation (in ₹)</string>
-    <string name="preferred_mode">Preferred work mode:</string>
+    <string name="preferred_mode">Preferred mode:</string>
     <string name="create">Create</string>
     <string name="re_enter_password">Re-enter password</string>
 
@@ -36,6 +36,8 @@
     <string name="powered_by">Powered by</string>
     <string name="alan_logo">Alan logo</string>
     <string name="icon">Icon</string>
+    <string name="credit">Credit:</string>
+    <string name="go_to_course">Go to course</string>
 
     <string-array name="tags">
         <item>Java </item>
@@ -43,6 +45,28 @@
         <item>Python </item>
         <item>C </item>
         <item>C++ </item>
+        <item>HTML </item>
+        <item>CSS </item>
+    </string-array>
+
+    <string-array name="credits">
+        <item>Telusko</item>
+        <item>Telusko</item>
+        <item>Programiz</item>
+        <item>Neso Academy</item>
+        <item>Neso Academy</item>
+        <item>Dani Krossing</item>
+        <item>Dani Krossing</item>
+    </string-array>
+
+    <string-array name="playlist_links">
+        <item>https://www.youtube.com/playlist?list=PLsyeobzWxl7pSqMzPF_SlvQ0IdcGA-XI2</item>
+        <item>https://www.youtube.com/playlist?list=PLsyeobzWxl7rrvgG7MLNIMSTzVCDZZcT4</item>
+        <item>https://www.youtube.com/playlist?list=PL98qAXLA6afuh50qD2MdAj3ofYjZR_Phn</item>
+        <item>https://www.youtube.com/playlist?list=PLBlnK6fEyqRggZZgYpPMUxdY1CYkZtARR</item>
+        <item>https://www.youtube.com/playlist?list=PLBlnK6fEyqRh6isJ01MBnbNpV3ZsktSyS</item>
+        <item>https://www.youtube.com/playlist?list=PL0eyrZgxdwhwNC5ppZo_dYGVjerQY3xYU</item>
+        <item>https://www.youtube.com/playlist?list=PL0eyrZgxdwhwNC5ppZo_dYGVjerQY3xYU</item>
     </string-array>
 
     <string-array name="job_filter">

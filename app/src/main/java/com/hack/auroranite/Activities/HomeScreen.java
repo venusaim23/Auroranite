@@ -43,7 +43,7 @@ public class HomeScreen extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbarHome);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.gradient_login);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_au_logo_circle);
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();

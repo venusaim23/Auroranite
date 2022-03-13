@@ -77,6 +77,7 @@ public class JobsFragment extends Fragment {
 
         binding.recyclerViewJobs.setHasFixedSize(true);
         binding.recyclerViewJobs.setLayoutManager(new LinearLayoutManager(context));
+        binding.swipeRefreshJobs.setRefreshing(true);
         jobs = new ArrayList<>();
         adapter = new JobAdapter(context, jobs);
         binding.recyclerViewJobs.setAdapter(adapter);
@@ -99,7 +100,7 @@ public class JobsFragment extends Fragment {
         try {
             String count = response.getString("count");
             Log.d(TAG, "Count: " + count);
-            Toast.makeText(context, "Count: " + count, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(context, "Count: " + count, Toast.LENGTH_SHORT).show();
 
             JSONArray results = response.getJSONArray("results");
             for (int i = 0; i < response.length(); i++) {
@@ -110,6 +111,8 @@ public class JobsFragment extends Fragment {
                 Log.d(TAG, "Job title: " + job.title);
 
                 job.favourite = false;
+
+                binding.swipeRefreshJobs.setRefreshing(false);
                 jobs.add(job);
                 adapter.notifyDataSetChanged();
             }

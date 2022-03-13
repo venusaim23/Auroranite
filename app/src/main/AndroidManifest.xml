@@ -11,7 +11,8 @@
         android:theme="@style/Theme.Auroranite">
         <activity
             android:name=".Activities.UpdateUser"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activities.HomeScreen"
             android:exported="false"
@@ -19,11 +20,13 @@
         <activity
             android:name=".Activities.CreateAccount"
             android:exported="false"
-            android:label="@string/create_account_" />
+            android:label="@string/create_account_"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activities.LoginActivity"
             android:exported="true"
-            android:theme="@style/Theme.Auroranite.NoActionBar">
+            android:theme="@style/Theme.Auroranite.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -16,6 +16,20 @@ public class User {
     public User() {
     }
 
+    public User(String name, String email, String education, String major, String gradYear,
+                String country, String skills, String experience, String salary, String workMode) {
+        this.name = name;
+        this.email = email;
+        this.education = education;
+        this.major = major;
+        this.gradYear = gradYear;
+        this.country = country;
+        this.skills = skills;
+        this.experience = experience;
+        this.salary = salary;
+        this.workMode = workMode;
+    }
+
     public User(String UID, String name, String email, String education, String major, String gradYear,
                 String country, String skills, String experience, String salary, String workMode) {
         this.UID = UID;
@@ -33,6 +47,10 @@ public class User {
 
     public String getUID() {
         return UID;
+    }
+
+    public void setUID(String UID) {
+        this.UID = UID;
     }
 
     public String getName() {
